@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_color_grey_800"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="8dp"
+    android:orientation="horizontal" >
+
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:id="@+id/list_header_social_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="some"
+        android:textColor="@color/material_yellow_500"
+        android:textSize="16sp"
+        app:typeface="robotoLight" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right" >
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/material_icon_date"
+            android:textColor="@color/material_yellow_500"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="14dp" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/list_header_social_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="some"
+            android:textColor="@color/material_yellow_500"
+            android:textSize="14sp"
+            app:typeface="robotoLight" />
+    </LinearLayout>
+
+</LinearLayout>

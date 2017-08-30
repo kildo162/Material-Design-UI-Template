@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/dialog_universal_info_image"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:contentDescription="@string/cd_main_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/left_menu_travel_small" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="#4cbdbcbc" />
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/material_icon_info"
+                android:textColor="@android:color/white"
+                android:textSize="48dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="22dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingTop="22dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:id="@+id/dialog_universal_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="SongName"
+                    android:textColor="@color/main_color_600"
+                    android:textSize="24sp"
+                    app:typeface="robotoRegular" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:id="@+id/dialog_universal_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:text="@string/lorem_ipsum_long"
+                    android:textColor="@color/main_color_grey_600"
+                    android:textSize="14sp"
+                    app:typeface="robotoRegular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:background="@color/main_color_grey_100" />
+
+        <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_background_empty" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_universal_info_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/ok"
+                android:textColor="@color/main_color_600"
+                android:textSize="14sp"
+                app:typeface="robotoRegular" />
+        </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+    </LinearLayout>
+
+</RelativeLayout>

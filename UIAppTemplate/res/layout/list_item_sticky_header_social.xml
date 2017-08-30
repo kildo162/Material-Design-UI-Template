@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_background_empty"
+    android:minHeight="144dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="0" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="32dp"
+            android:layout_weight="0"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:id="@+id/list_item_sticky_header_social_icon_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:padding="4dp"
+                android:text="@string/material_icon_like"
+                android:textColor="@color/main_color_500"
+                android:textSize="16dp" />
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:id="@+id/list_item_sticky_header_social_icon_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="0"
+                android:padding="4dp"
+                android:text="@string/material_icon_bookmark"
+                android:textColor="@color/main_color_500"
+                android:textSize="16dp" />
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:id="@+id/list_item_sticky_header_social_icon_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:padding="4dp"
+                android:text="@string/material_icon_share"
+                android:textColor="@color/main_color_500"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_sticky_header_social_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:textColor="@color/main_color_grey_700"
+                android:textSize="16sp"
+                app:typeface="robotoLight" />
+
+            <ImageView
+                android:id="@+id/list_item_sticky_header_social_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:id="@+id/list_item_sticky_header_social_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:paddingBottom="12dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:text="@string/lorem_ipsum_long"
+        android:textColor="@color/main_color_grey_700"
+        android:textSize="14sp"
+        app:typeface="robotoRegular" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="@color/main_color_500" />
+
+</LinearLayout>

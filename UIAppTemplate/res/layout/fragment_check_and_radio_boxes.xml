@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:text="UNIVERSAL"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:baselineAligned="false"
+            android:gravity="center" >
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fff"
+                app:rippleColor="@color/main_color_500_10_percent" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/main_color_500"
+                app:rippleColor="@color/main_color_700" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/main_color_grey_800"
+                app:rippleColor="#33bdbcbc" >
+
+                <!-- Grey 400 with 20 percent transparency -->
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:rippleColor="@color/main_color_grey_400" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Light"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:text="Mail notification" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_background_empty"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/fontello_heart_empty"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:rippleColor="@color/main_color_grey_400" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Light"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:text="SMS notification" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_background_empty"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/fontello_heart_empty"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:rippleColor="@color/main_color_grey_400" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Light"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:text="Hangout notification" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_background_empty"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/fontello_heart_empty"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+        <View style="@style/DividerStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color_grey_800"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:rippleColor="@color/main_color_grey_400" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Dark"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:text="Mail notification" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_background_empty"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/fontello_heart_empty"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color_grey_800"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:rippleColor="@color/main_color_grey_400" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Dark"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:text="SMS notification" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_background_empty"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/fontello_heart_empty"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color_grey_800"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:rippleColor="@color/main_color_grey_400" >
+
+                <CheckBox
+                    style="@style/CheckBoxStyle.Dark"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:text="Hangout notification" />
+            </com.csform.android.uiapptemplate.view.MaterialRippleLayout>
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_background_empty"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/fontello_heart_empty"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:text="MEDIA"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="20dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/search_bar_media_background"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_note"
+                        android:textColor="@color/material_red_500"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Song"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoThin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:gravity="center_vertical" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_media_check1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_red_500"
+                        android:textSize="26dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/search_bar_media_background"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_headphones"
+                        android:textColor="@color/material_red_500"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Album"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoThin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:gravity="center_vertical" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_media_check2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_red_500"
+                        android:textSize="26dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/search_bar_media_background"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_human"
+                        android:textColor="@color/material_red_500"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Artist"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoThin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:gravity="center_vertical" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_media_check3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_red_500"
+                        android:textSize="26dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="SHOP"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_shop_check1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Shoes"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_shop_check2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Clothes"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_shop_check3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Mobile"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_shop_check4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="IT"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_shop_check5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Food"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/fragment_check_boxes_shop_check6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Fruits"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="SOCIAL"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="16dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/fragment_check_boxes_social_image1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Name Surname"
+                    android:textColor="@color/main_color_grey_600"
+                    android:textSize="16dp"
+                    app:typeface="robotoRegular" />
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/fragment_check_boxes_social_check1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_check_empty"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/fragment_check_boxes_social_image2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Name Surname"
+                    android:textColor="@color/main_color_grey_600"
+                    android:textSize="16dp"
+                    app:typeface="robotoRegular" />
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/fragment_check_boxes_social_check2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_check_empty"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/fragment_check_boxes_social_image3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Name Surname"
+                    android:textColor="@color/main_color_grey_600"
+                    android:textSize="16dp"
+                    app:typeface="robotoRegular" />
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/fragment_check_boxes_social_check3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_check_empty"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="TRAVEL"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#cc263238"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="16dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/fragment_check_boxes_travel_check1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_box_full"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="30sp" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Add extra bed"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    app:typeface="robotoLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/fragment_check_boxes_travel_check2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_box_full"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="30sp" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Transport to hotel"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    app:typeface="robotoLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/fragment_check_boxes_travel_check3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_box_full"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="30sp" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Extra heavy laguage"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    app:typeface="robotoLight" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

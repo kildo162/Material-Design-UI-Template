@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background_white"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/google_cards_background_bottom"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="8dp" >
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/list_item_google_cards_shop_promo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROMO"
+            android:textColor="@color/material_lime_500"
+            android:textSize="16sp"
+            app:typeface="robotoBlack" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/list_item_google_cards_shop_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginTop="8dp"
+            android:text="Special discount! Buy it now!"
+            android:textColor="@color/material_red_500"
+            android:textSize="20sp"
+            app:typeface="robotoBlack" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp" >
+
+        <ImageView
+            android:id="@+id/list_item_google_cards_shop_image"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:contentDescription="@string/cd_main_image"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="@drawable/gradient_background_shop" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/list_item_google_cards_shop_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:text="$19.19"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:typeface="robotoBlack" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/list_item_google_cards_shop_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0"
+            android:background="@drawable/selector_drag_and_drop_shop"
+            android:gravity="center"
+            android:minHeight="36dp"
+            android:minWidth="64dp"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:text="BUY"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:typeface="robotoMedium" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_google_cards_shop_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxLines="2"
+                android:text="Fresh fruits directly from our \nfarms! Don&apos;t miss it!"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:typeface="robotoLight" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_google_cards_shop_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:text="Only this monday!"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:typeface="robotoRegular" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

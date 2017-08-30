@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_wizard_travel_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:context=".TabMediaActivity" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/material_blue_grey_900"
+        android:paddingTop="56dp"
+        android:paddingBottom="48dp" >
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/activity_wizard_travel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Fragment Example"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:typeface="robotoLight" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/activity_wizard_travel_text"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="@string/lorem_ipsum_long"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:typeface="robotoRegular" />
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/activity_wizard_travel_possition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="0dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="0dp"
+            android:textColor="@android:color/white"
+            android:textSize="6sp" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/activity_wizard_travel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:layout_weight="0"
+            android:background="@drawable/selector_wizard_travel"
+            android:gravity="center"
+            android:minHeight="36dp"
+            android:minWidth="96dp"
+            android:padding="8dp"
+            android:text="SIGN IN"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:typeface="robotoMedium" />
+    </LinearLayout>
+
+</LinearLayout>

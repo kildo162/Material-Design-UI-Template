@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/dialog_subscribe_layout"
+        android:layout_width="240dp"
+        android:layout_height="220dp"
+        android:background="@color/main_color_600"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/stay_tuned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="0.5"
+                android:maxLines="4"
+                android:text="@string/stay_tuned"
+                android:textColor="@color/material_light_yellow_600"
+                android:textSize="14sp"
+                app:typeface="robotoBlack" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/subscribe_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.5"
+                android:maxLines="4"
+                android:text="@string/subscribe_to"
+                android:textColor="@color/material_light_yellow_600"
+                android:textSize="14sp"
+                app:typeface="robotoBlack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp">
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_social_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:maxLines="4"
+                android:paddingBottom="2dp"
+                android:paddingTop="22dp"
+                android:text="@string/your_email"
+                android:textColor="@color/email_color"
+                android:textSize="10sp"
+                app:typeface="robotoLight" />
+
+            <EditText
+                android:id="@+id/dialog_subscribe_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:backgroundTintMode="@android:color/transparent"
+                android:drawableBottom="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/your_email"
+                android:inputType="text"
+                android:singleLine="false"
+                android:textColor="@color/main_color_grey_100"
+                android:textColorHint="@color/main_color_grey_100"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/material_light_yellow_600" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="right">
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_subscribe_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_dialog_warning"
+
+                android:gravity="center_horizontal"
+                android:minWidth="64dp"
+                android:padding="6dp"
+                android:text="@string/cancel"
+                android:textColor="@color/material_light_yellow_600"
+                android:textSize="14sp"
+                app:typeface="robotoMedium"
+                android:clickable="true"/>
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_subscribe_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_dialog_warning"
+                android:gravity="center_horizontal"
+                android:minWidth="64dp"
+                android:padding="6dp"
+                android:text="@string/ok"
+                android:textColor="@color/material_light_yellow_600"
+                android:textSize="14sp"
+                app:typeface="robotoMedium"
+                android:clickable="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

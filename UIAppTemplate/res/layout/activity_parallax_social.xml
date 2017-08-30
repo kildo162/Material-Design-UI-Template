@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.csform.android.uiapptemplate.view.pzv.PullToZoomListViewEx
+        android:id="@+id/paralax_social_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        app:headerView="@layout/header_parallax_social" />
+    <!-- This part of code is from old library for PullToZoomView -->
+        <!-- app:listHeadView="@layout/header_navigation_drawer_3" /> -->
+
+</LinearLayout>

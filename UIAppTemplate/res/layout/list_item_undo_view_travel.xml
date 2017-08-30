@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/undo_button_travel"
+    android:layout_width="match_parent"
+    android:layout_height="144dp"
+    android:background="@color/main_color_grey_100"
+    android:orientation="vertical"
+    tools:ignore="DuplicateIds">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="26dp"
+            android:text="@string/undo_deletion_travel"
+            android:textColor="@color/main_color_grey_600"
+            android:textSize="18sp"
+            app:typeface="robotoLight" />
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/expandable_item_social_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingBottom="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="26dp"
+            android:text="@string/material_icon_check"
+            android:textColor="@color/material_green_500"
+            android:textSize="52dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0" >
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/undo_button_travel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="Swipe to dismiss"
+            android:textColor="@color/main_color_grey_600"
+            android:textSize="10sp"
+            app:typeface="robotoLight"
+            tools:ignore="DuplicateIds" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/undo_button_travel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Press to undo"
+            android:textColor="@color/main_color_grey_600"
+            android:textSize="10sp"
+            app:typeface="robotoLight"
+            tools:ignore="DuplicateIds" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp" >
+
+        <ImageView
+            android:id="@+id/activity_drag_and_drop_shop_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/cd_main_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/drag_and_drop_shop_background_image" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b281772f" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp" >
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:id="@+id/activity_list_view_drag_and_drop_shop_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Order No.1"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:typeface="robotoLight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Will be shipped: "
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        app:typeface="robotoLightItalic" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/activity_list_view_drag_and_drop_shop_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15.5.2015."
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        app:typeface="robotoLightItalic" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:gravity="right|center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/activity_list_view_drag_and_drop_shop_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="357$"
+                        android:textColor="@android:color/white"
+                        android:textSize="30sp"
+                        app:typeface="robotoBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|bottom"
+                    android:orientation="vertical" >
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/activity_list_view_drag_and_drop_shop_proceed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/selector_expandable_shop"
+                        android:gravity="center"
+                        android:minHeight="36dp"
+                        android:minWidth="64dp"
+                        android:padding="8dp"
+                        android:text="PROCEED"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:typeface="robotoMedium" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_red_900" />
+
+    <com.nhaarman.listviewanimations.itemmanipulation.DynamicListView
+        android:id="@+id/activity_list_view_drag_and_drop_dynamic_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

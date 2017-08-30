@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp" >
+
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/list_item_sticky_header_travel_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/material_grey_300"
+        android:contentDescription="@string/cd_main_image"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#cc000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp" >
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/list_item_sticky_header_travel_name_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/material_icon_account"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="16dp" />
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:id="@+id/list_item_sticky_header_travel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Hotel Palace"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    app:typeface="robotoLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/list_item_sticky_header_travel_walk_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/material_icon_account"
+                        android:textColor="@color/material_yellow_500"
+                        android:textSize="16dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/list_item_sticky_header_travel_walk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="3:30min walking tour"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:id="@+id/list_item_sticky_header_travel_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:gravity="bottom"
+                    android:text="112$"
+                    android:textColor="@color/material_yellow_500"
+                    android:textSize="22sp"
+                    app:typeface="robotoBlack" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="0"
+            android:background="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

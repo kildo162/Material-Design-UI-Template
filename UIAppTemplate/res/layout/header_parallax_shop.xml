@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="360dp"
+    android:minHeight="360dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/header_parallax_shop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/cd_main_image"
+        android:minHeight="360dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/parallax_shop_header_image" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" >
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/header_parallax_shop_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:text="@string/material_icon_like"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/header_parallax_shop_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:text="@string/material_icon_favorite"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/header_parallax_shop_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:text="@string/material_icon_share"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="8dp" >
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/header_parallax_shop_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:maxLines="2"
+            android:text="Super discount!"
+            android:textColor="@color/material_lime_500"
+            android:textSize="24sp"
+            app:typeface="robotoBlack" />
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:id="@+id/header_parallax_shop_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/transparent"
+            android:maxLines="1"
+            android:text="50% OFF!"
+            android:textColor="@color/material_lime_500"
+            android:textSize="50sp"
+            app:typeface="robotoBlack" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/white" />
+
+</RelativeLayout>

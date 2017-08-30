@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/dialog_social_premium_layout"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color_600"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_social_premium_free"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/main_color_grey_100"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Free"
+                android:textColor="@color/main_color_grey_600"
+                android:textSize="20sp"
+                app:typeface="robotoBlack" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_social_premium_premium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/main_color_600"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Premium"
+                android:textColor="@color/material_light_yellow_600"
+                android:textSize="20sp"
+                app:typeface="robotoBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="22dp"
+            android:paddingTop="22dp" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_social_premium_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/username"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:typeface="robotoLight" />
+
+            <EditText
+                android:id="@+id/dialog_social_premium_edit_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:backgroundTintMode="@android:color/transparent"
+                android:drawableBottom="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/username"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/material_light_yellow_600" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_social_premium_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:maxLines="4"
+                android:text="@string/password"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:typeface="robotoLight" />
+
+            <EditText
+                android:id="@+id/dialog_social_premium_edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:backgroundTintMode="@android:color/transparent"
+                android:drawableBottom="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/material_light_yellow_600" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_social_premium_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_dialog_warning"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="8dp"
+                android:text="@string/cancel"
+                android:textColor="@color/material_light_yellow_600"
+                android:textSize="14sp"
+                app:typeface="robotoMedium" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/dialog_social_premium_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_dialog_warning"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="8dp"
+                android:text="@string/ok"
+                android:textColor="@color/material_light_yellow_600"
+                android:textSize="14sp"
+                app:typeface="robotoMedium" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

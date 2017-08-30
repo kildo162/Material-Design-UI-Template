@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+        android:id="@+id/list_item_expandable_travel_icon"
+        style="@style/TextViewAppearance.Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical"
+        android:padding="0dp"
+        android:textColor="@color/material_yellow_500"
+        android:textSize="20dp" />
+
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:id="@+id/list_item_expandable_travel_textTitle"
+        style="@style/TextViewAppearance.Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/main_color_grey_700"
+        android:textSize="14dp"
+        app:typeface="robotoRegular" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/main_color_grey_300" />
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:background="@drawable/google_cards_background_bottom"
+    android:gravity="left"
+    android:orientation="vertical" >
+
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:id="@+id/list_item_parallax_travel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Eat at Joe"
+        android:textColor="@color/main_color_grey_700"
+        android:textSize="24sp"
+        app:typeface="robotoThin" />
+
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:id="@+id/list_item_parallax_travel_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+        android:maxLines="2"
+        android:text="@string/lorem_ipsum_long"
+        android:textColor="@color/main_color_grey_600"
+        android:textSize="14sp"
+        app:typeface="robotoRegular" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="16dp"
+        android:gravity="right" >
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/list_item_parallax_travel_icon_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/material_icon_star_outline"
+            android:textColor="@color/main_color_500"
+            android:textSize="20dp" />
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/list_item_parallax_travel_icon_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/material_icon_message"
+            android:textColor="@color/main_color_500"
+            android:textSize="20dp" />
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/list_item_parallax_travel_icon_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="@string/material_icon_share"
+            android:textColor="@color/main_color_500"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_color_500" />
+
+</LinearLayout>

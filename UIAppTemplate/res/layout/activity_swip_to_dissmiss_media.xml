@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_media"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#cc263238" >
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/activity_swip_to_dissmiss_media_play"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="right|center_vertical"
+            android:padding="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/material_icon_play_circle"
+            android:textColor="@color/material_red_500"
+            android:textSize="72dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/activity_swip_to_dissmiss_media_playlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingTop="24dp"
+                android:text="PlaylistName"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:typeface="robotoLight" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/activity_swip_to_dissmiss_media_songs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56 songs"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:typeface="robotoLight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp" >
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:id="@+id/activity_swip_to_dissmiss_media_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:maxLines="1"
+                    android:text="35:72"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:typeface="robotoBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:gravity="right"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_swip_to_dissmiss_media_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_like"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp" />
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_swip_to_dissmiss_media_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_favorite"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp" />
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_swip_to_dissmiss_media_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_share"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+~ Copyright 2014 Niek Haarman
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~ http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+
+
+
+    -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_weight="0"
+        android:background="@android:color/white" />
+
+    <com.nhaarman.listviewanimations.itemmanipulation.DynamicListView
+        android:id="@+id/activity_swip_to_dissmiss_media_dynamic_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

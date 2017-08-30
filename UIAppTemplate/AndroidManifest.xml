@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.csform.android.uiapptemplate"
+    android:versionCode="9"
+    android:versionName="2.1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ParallaxKenBurnsActivity"
+            android:theme="@style/AppTheme.Overlay" />
+        <activity android:name=".ParallaxActivity" />
+        <activity android:name=".ParallaxTravelActivity" />
+        <activity android:name=".ParallaxSocialActivity" />
+        <activity android:name=".ParallaxMediaActivity" />
+        <activity android:name=".ParallaxShopActivity" />
+        <activity
+            android:name=".ImageGalleryCategoryActivity"
+            android:theme="@style/AppTheme.NoShadow" />
+        <activity
+            android:name=".ImageGallerySubcategoryActivity"
+            android:theme="@style/AppTheme.NoShadow" />
+        <activity
+            android:name=".LogInPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterShopPageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SplashScreensActivity" />
+        <activity android:name=".ListViewsActivity" />
+        <activity
+            android:name=".LeftMenusActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LeftMenusTravelActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LeftMenusSocialActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LeftMenusMediaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LeftMenusShopActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".SearchBarsActivity" />
+        <activity
+            android:name=".SearchBarShopActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SearchBarMediaActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".CategoriesListViewActivity" />
+        <activity android:name=".DragAndDropSocialActivity" />
+        <activity android:name=".DragAndDropMediaActivity" />
+        <activity android:name=".DragAndDropShopActivity" />
+        <activity android:name=".DragAndDropTravelActivity" />
+        <activity android:name=".SwipToDissmissListViewActivity" />
+        <activity android:name=".SwipToDissmissMediaActivity" />
+        <activity android:name=".SwipToDissmissShopActivity" />
+        <activity android:name=".GoogleCardsActivity" />
+        <activity android:name=".GoogleCardsTravelActivity" />
+        <activity android:name=".GoogleCardsMediaActivity" />
+        <activity android:name=".GoogleCardsShopActivity" />
+        <activity android:name=".GoogleCardsSocialActivity" />
+        <activity android:name=".ExpandableListViewActivity" />
+        <activity android:name=".ExpandableMediaListViewActivity" />
+        <activity android:name=".ExpandableSocialListViewActivity" />
+        <activity android:name=".ExpandableTravelListViewActivity" />
+        <activity android:name=".ExpandableShopListViewActivity" />
+        <activity android:name=".StickyListHeadersActivity" />
+        <activity android:name=".DialogUniversalInfoActivity" />
+        <activity android:name=".DialogMediaActivity" />
+        <activity android:name=".DialogTravelActivity" />
+        <activity android:name=".DialogShopActivity" />
+        <activity android:name=".DialogSocialActivity" />
+
+        <activity android:name=".DialogUniversalWarningActivity" />
+
+        <activity
+            android:name=".WizardTravelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".WizardMediaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".WizardShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".WizardSocialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".WizardUniversalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".TabMediaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".TabShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".TabSocialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".TabTravelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".TabUniversalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTabsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".SubscribeDialog"
+            android:theme="@style/NoTitleDialog" >
+        </activity>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_icon" />
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+
+
+    </application>
+
+</manifest>

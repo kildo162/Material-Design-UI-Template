@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#99f9fafa"
+        android:padding="8dp" >
+
+        <LinearLayout
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/list_item_sticky_header_shop_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_grey_300"
+                android:contentDescription="@string/cd_main_image"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp" >
+
+                <ImageView
+                    android:id="@+id/list_item_sticky_header_shop_image1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/material_grey_300"
+                    android:contentDescription="@string/cd_main_image"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/list_item_sticky_header_shop_image2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/material_grey_300"
+                    android:contentDescription="@string/cd_main_image"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/list_item_sticky_header_shop_image3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/material_grey_300"
+                    android:contentDescription="@string/cd_main_image"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/list_item_sticky_header_shop_image4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/material_grey_300"
+                    android:contentDescription="@string/cd_main_image"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp" >
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/list_item_sticky_header_shop_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Product Name"
+                        android:textColor="@color/main_color_grey_800"
+                        android:textSize="14sp"
+                        app:typeface="robotoLight" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/list_item_sticky_header_shop_shipping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free shipping"
+                        android:textColor="@color/main_color_grey_400"
+                        android:textSize="12sp"
+                        app:typeface="robotoLightItalic" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <com.csform.android.uiapptemplate.font.RobotoTextView
+                            android:id="@+id/list_item_sticky_header_shop_old_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="left"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="8dp"
+                            android:text="$ 42.99"
+                            android:textColor="@color/main_color_grey_400"
+                            android:textSize="14sp"
+                            app:typeface="robotoBlack" />
+
+                        <View
+                            android:layout_width="56dp"
+                            android:layout_height="1dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@color/main_color_grey_400" />
+                    </RelativeLayout>
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/list_item_sticky_header_shop_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="$35.99"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:orientation="vertical"
+                    android:gravity="right|bottom" >
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:id="@+id/list_item_sticky_header_shop_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0"
+                        android:background="@drawable/selector_expandable_shop"
+                        android:gravity="center"
+                        android:minHeight="36dp"
+                        android:minWidth="64dp"
+                        android:text="BUY"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:typeface="robotoMedium" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>

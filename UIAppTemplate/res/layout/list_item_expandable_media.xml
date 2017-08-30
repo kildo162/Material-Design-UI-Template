@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_background_empty"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_weight="0"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/list_item_expandable_media_image"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_weight="1"
+            android:background="@color/material_grey_300"
+            android:contentDescription="@string/cd_main_image"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/material_red_500"
+            android:orientation="vertical" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_expandable_media_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:paddingBottom="4dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="16dp"
+                android:paddingTop="24dp"
+                android:text="ArtistName"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:typeface="robotoLight" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_expandable_media_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:paddingRight="16dp"
+                android:text="SINGER"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:typeface="robotoBlack" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right|bottom"
+                android:padding="8dp" >
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/list_item_expandable_media_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_like"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/list_item_expandable_media_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_favorite"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/list_item_expandable_media_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_share"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

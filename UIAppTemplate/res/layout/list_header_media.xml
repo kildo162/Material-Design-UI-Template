@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/material_red_500"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp"
+    android:paddingLeft="54dp"
+    android:paddingRight="20dp"
+    android:paddingTop="12dp" >
+
+    <com.csform.android.uiapptemplate.font.RobotoTextView
+        android:id="@+id/list_header_media_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="some"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:typeface="robotoLight" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right" >
+
+        <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+            android:id="@+id/list_header_media_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="@string/material_icon_heart_outline"
+            android:textColor="@android:color/white"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+</LinearLayout>

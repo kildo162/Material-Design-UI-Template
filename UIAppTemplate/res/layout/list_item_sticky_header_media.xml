@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#b237474f" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <ImageView
+                android:id="@+id/list_item_sticky_header_media_image"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@color/material_grey_300"
+                android:contentDescription="@string/cd_main_image"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="12dp" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_sticky_header_media_album_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="AlbumName (2006)"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:typeface="robotoLight" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_sticky_header_media_artist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ArtistName"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:typeface="robotoMedium" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_sticky_header_media_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="33:42"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:typeface="robotoLight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:id="@+id/list_item_sticky_header_media_icon_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/material_icon_play_single"
+                android:textColor="@color/material_red_500"
+                android:textSize="32dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>

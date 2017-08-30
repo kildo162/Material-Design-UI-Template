@@ -1,0 +1,4 @@
+<manifest
+    package="com.github.siyamed.shapeimageview" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:targetSdkVersion="21" android:minSdkVersion="9"/>
+</manifest>

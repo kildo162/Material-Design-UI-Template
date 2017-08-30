@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="64dp"
+                android:layout_marginTop="32dp"
+                android:gravity="right" >
+
+                <com.csform.android.uiapptemplate.font.RobotoTextView
+                    android:id="@+id/activity_search_bar_shop_filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/transparent_button_selector"
+                    android:minHeight="36dp"
+                    android:minWidth="64dp"
+                    android:padding="8dp"
+                    android:text="FILTERS"
+                    android:textColor="@color/material_lime_700"
+                    android:textSize="16sp"
+                    app:typeface="robotoBlack" />
+
+                <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                    android:id="@+id/activity_search_bar_shop_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:padding="8dp"
+                    android:text="@string/material_icon_chevron_down"
+                    android:textColor="@color/material_lime_700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/material_lime_700" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_search_bar_shop_filters_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_shoes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Shoes"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_clothes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Clothes"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Mobile"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_it"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="IT"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Food"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_fruits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Fruits"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_vegetable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Vegetable"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_drinks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Drinks"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="8dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_alcohol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Alcohol"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp" >
+
+                    <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                        android:id="@+id/activity_search_bar_shop_books"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="8dp"
+                        android:text="@string/material_icon_check_empty"
+                        android:textColor="@color/material_lime_900"
+                        android:textSize="26dp" />
+
+                    <com.csform.android.uiapptemplate.font.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/transparent_button_selector"
+                        android:maxLines="1"
+                        android:text="Books"
+                        android:textColor="@color/material_lime_700"
+                        android:textSize="20sp"
+                        app:typeface="robotoLight" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/gradient_search_bar_shop_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/search_bar_background_travel"
+            android:gravity="center_vertical" >
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/fontello_search"
+                android:textColor="@color/material_lime_900"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+            <EditText
+                android:id="@+id/search_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:textColor="@color/material_lime_900" >
+
+                <requestFocus />
+            </EditText>
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:id="@+id/search_microfon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/fontello_microfon"
+                android:textColor="@color/material_lime_900"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:id="@+id/search_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/fontello_x_mark"
+                android:textColor="@color/material_lime_900"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/transparent_button_selector"
+                android:minHeight="36dp"
+                android:minWidth="64dp"
+                android:padding="8dp"
+                android:text="SEARCH"
+                android:textColor="@android:color/white"
+                app:typeface="robotoMedium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/list_view" />
+
+</LinearLayout>

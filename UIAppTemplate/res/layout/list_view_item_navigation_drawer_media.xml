@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.csform.android.uiapptemplate.view.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/RippleStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#cc263238" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="56dp"
+            android:orientation="horizontal" >
+
+            <com.csform.android.uiapptemplate.font.MaterialDesignIconsTextView
+                android:id="@+id/list_item_navigation_drawer_media_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:padding="8dp"
+                android:text="@string/material_icon_account"
+                android:textColor="@color/material_red_500"
+                android:textSize="24dp" />
+
+            <com.csform.android.uiapptemplate.font.RobotoTextView
+                android:id="@+id/list_item_navigation_drawer_media_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Album"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:typeface="robotoLight" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.csform.android.uiapptemplate.view.MaterialRippleLayout>

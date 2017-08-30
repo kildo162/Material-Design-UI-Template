@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="24dp"
+            android:text="UNIVERSAL"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/a"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/a" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/b"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/c"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/c" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/d"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/d" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/e"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/e" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/f"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/g"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/g" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/h"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/h" />
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="24dp"
+            android:text="MEDIA"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/baloon"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/baloon" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/pig"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/pig" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/play"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/play" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/rewind"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/rewind" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/soundcloud"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/soundcloud" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/speaker"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/speaker" />
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="24dp"
+            android:text="SHOP"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/bag"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/bag" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/basket"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/basket" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/cart"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/cart" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/cupshop"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/cupshop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/dollar"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/dollar" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/heksagonal"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/heksagonal" />
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="24dp"
+            android:text="SOCIAL"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/camera"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/camera" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/heart"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/heart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/like"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/like" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/shit"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/shit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/speach_cloud"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/speach_cloud" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/star"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/star" />
+        </LinearLayout>
+
+        <com.csform.android.uiapptemplate.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="24dp"
+            android:text="TRAVEL"
+            android:textColor="@color/main_color_500"
+            android:textSize="16sp"
+            app:typeface="robotoLight" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/main_color_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/cloud"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/cloud" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/cup"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/cup" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/house"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/house" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/pin"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/pin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/suitcase"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/suitcase" />
+
+            <com.csform.android.uiapptemplate.view.siv.ShapeImageView
+                android:id="@+id/truck"
+                style="@style/ImageViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:siShape="@raw/truck" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
