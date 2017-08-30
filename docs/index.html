@@ -1,0 +1,1015 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Android UI App Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt" style="color:#d54a41">&ldquo;Android UI App&rdquo; Documentation by &ldquo;CreativeStudioForm&rdquo; v2.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Android UI App&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: November 2014<br>
+					By: CreativeStudioForm<br>
+					Email: <a href="mailto:dev@csform.com">dev@csform.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our code. If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form <a href="http://codecanyon.net/user/CreativeForm">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#importProjectAS">Import Project in Android studio</a></li>
+			<li><a href="#notices">Important Notices</a></li>
+			<ul style="margin: 0px 1.5em 0px 1.5em;">
+				<li><a href="#app_structure">Structure of This App Template</a></li>
+				<li><a href="#roboto">Roboto Text View</a></li>
+				<li><a href="#fontello">Fontello Text View</a></li>
+			</ul>
+			<li><a href="#foreign_projects">Foreign Projects</a></li>
+			<li><a href="#splash_screens">Splash Screens</a></li>
+			<li><a href="#progress_bars">Progress Bars</a></li>
+			<li><a href="#text_views">Text Views</a></li>
+			<li><a href="#search_bars">Search Bars</a></li>
+			<li><a href="#login_pages">Login Pages</a></li>
+			<li><a href="#dialogs">Dialogs</a></li>
+			<li><a href="#tabs">Tabs</a></li>
+			<li><a href="#wizards">Wizards</a></li>
+			<li><a href="#image_gallery">Image Gallery</a></li>
+			<li><a href="#left_menus">Left Menus</a></li>
+			<li><a href="#parallax">Parallax</a></li>
+			<li><a href="#shape_image_views">Shape Image Views</a></li>
+			<li><a href="#list_views">List Views</a></li>
+			<li><a href="#check_radio">Check Boxes and Radio Buttons</a></li>
+			<li><a href="#firebase_notif">Firebase notifications</a></li>
+			<li><a href="#subscribe_dialog">Mailchimp subscribe dialog</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="importProjectAS"><strong>Import project in Android Studio</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Android Studio project is in folder "android - AS". First, open AS, click File -> Close Project...then select "Open an Existing Android Studio project". After that, find downloaded folder from codecanyon, and find folder "android - AS".</p>
+		<p>Wait few moments for studio to finish synchronizing and building and after that you are free to run  UIAppTemplate project</p>
+		
+		
+		<hr>
+
+		<h3 id="notices"><strong>Important notices</strong> - <a href="#toc">top</a></h3>
+		<p>
+			This application isn't doing anything special. This application is created to show you how to create beautiful UI elements. You can use code from here by just copy/pasting it. Or at least take a look at code (mainly xml files) and get to know with tehniques used here. After all, you can always email us if you need further help.
+		</p>
+		<h4 id="app_structure"><strong>Structure of This App Template</strong></h4>
+		<p>
+			This demo app's structure is: you have MainActivity which basicly implements native Android left menu (<a href="https://developer.android.com/training/implementing-navigation/nav-drawer.html">Navigation Drawer</a>). When you open the app, you'll see that front page is just first item selected from left menu. In MainActivity you have 12 left menu items (more will come in future). Left menu is just a ListView, so left menu items are just objects of DrawerItem class added in DrawerAdapter class. DrawerAdapter is used to populate left menu ListView. DrawerItem class has three fields: icon, title and tag. Icon and title fields are integer values that represent Resource values of partucular icon and title related to that item in left menu. Tag is one of the DrawerModel's public, static and final String fields that start with <strong>DRAWER_ITEM_TAG_</strong>. This tag is used to determine which item from left menu list is clicked. This way, you can reorder items easily since clicking on item is not related to position but to tag. Clicking the item replaces Fragment in FrameLayout that is defined in <i>main_activity.xml</i>. Every fragment is defined in <i>~.fragment</i> package. To see what fragment is used for what, you can open any fragment. We gave names to fragments that are equal to the item they represent ending with <i>~Fragment.java</i>. Some fragments only have ListView as a main content (and items in list open new Activity that shows real content), and others have real content right away.
+		</p>
+		
+		<h4 id="roboto"><strong>Roboto Text View</strong></h4>
+			<p>
+				We use tehnique of defining typeface through xml (<a href="http://lagoman.com/2014/11/android-custom-typefacefont-via-xml/" target="_blank">click here for more details</a>). Idea is to create a new class that inherits TextView. Then we add custom defined attribute to attrs.xml file by declaring styleable <i>RobotoTextView</i>. Then, in related construtors of RobotoTextView class we read if there were defined attribute called <i>typeface</i>. If it exists, we set typeface according to the value of the attribute. Here is snippet of code:
+			</p>
+			<code>
+				&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				&nbsp;&nbsp;&nbsp;&nbsp;xmlns:app="http://schemas.android.com/apk/res/com.csform.android.uiapptemplate" </br>
+				&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</br>
+				&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"&gt;</br></br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;com.csform.android.uiapptemplate.font.RobotoTextView</br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="wrap_content"</br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="wrap_content"</br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app:typeface="robotoBold" /&gt;</br></br>
+				&lt;/LinearLayout&gt;</br>
+			</code>
+			</br>
+			<p>
+				To use custom defined attribute in an xml layout file, you need to add namespace like we did with namespace <i>app</i>. You can set any name that you want (we decided to use <i>app</i>). If you however want to define attribute value through styles, all you need to do is to use attribute name without namespace prefix (take a look at how we set <i>typeface</i> attribute in <i>styles_text_view.xml</i> file.)
+			</p>
+			<p>
+				IMPORTANT: If you want to use this class to set typeface through xml in your project(s), copy folder <i>fonts</i> that is located in folder <i>assets</i>. Also, you should create <i>attrs.xml</i> file (if you haven't) and create styleable <i>RobotoTextView</i> like we did in our <i>attrs.xml</i> file.
+			</p>
+		
+		<h4 id="fontello"><strong>Material Design Icons (Fontello) text view</strong></h4>
+			<p>
+				Another tehnique we use in this app is a tehnique of using text with appropriate font instead of icons. How do we achieve this? We use <a href="http://fontello.com/" target="_blank">fontello.com</a> generator to generate font file. It generates few font file extensions, but we use .ttf extension. Then, when fontello generates fonts, you get zip file with codes for each character/icon. When you open codes, you will see that they are written in hexadecimal format. Then we use that format to set them in strings.xml.
+			</p>
+			<p>
+				Then, all you need to do is to set text defined in strings.xml resource to Fontello text view. And you get icon that is actually a font defined for set of characters fontello.com has given to us. This way, we avoided using png icons in (at least) four dimensions (in x-dpi folders) thus decreased size of the app.
+			</p>
+			<p>
+				You can see example of using this tehnique in <i>res/layout/list_view_item_navigation_drawer_1.xml</i> xml file or in <i>res/layout/activity_login_page_dark.xml</i>.
+			</p>
+			<p>
+				NOTE: Whenever we use this tehnique to set icon, we set textSize in dps. You should never set text size in dps unless you have a good reason. And we have one: we don't want our icons grow big when user enlarges entire phone text size through global settings.
+			</p>
+			<p>
+				IMPORTANT: To use our or custom set of fontello icons, copy/paste <i>MMaterialDesignIcons.ttf</i> file (from our project) to <i>assets/fonts</i> folder.
+			</p>
+		<hr>
+		
+		<h3 id="foreign_projects"><strong>Foreign projects</strong> - <a href="#toc">top</a></h3>
+		<p>
+			This app uses many projects from GitHub or elsewhere. All of them have licence that allows us to import the project in our project and then sell it on Envato.
+		</p>
+		<p>
+			We will list every foreign project that is used in this project with a link to it. If you have any questions regarding lack of foreign projects documentation, don't hesitate to email us. We will try to help you.
+		</p>
+		<p>
+			Projects we used for this template are:
+		</p>
+		
+		<ul class="alpha">
+			<li>
+				<h4><strong>Universal Image Loader</strong> - <a href="https://github.com/nostra13/Android-Universal-Image-Loader">link</a></h4>
+				<p>Used for effective image loading. Take a look at library for more details.</p>
+			</li>
+			<li>
+				<h4><strong>Ken Burns View</strong> - <a href="https://github.com/flavioarfaria/KenBurnsView">link</a></h4>
+				<p>Extended ImageView that is capable of showing <a href="http://en.wikipedia.org/wiki/Ken_Burns_effect">Ken Burns Effect</a>.</p>
+			</li>
+			<li>
+				<h4><strong>Progress Wheel</strong> - <a href="https://github.com/Todd-Davies/ProgressWheel">link</a></h4>
+				<p>Progress bar.</p>
+			</li>
+			<li>
+				<h4><strong>Circular Progress Button</strong> - <a href="https://github.com/dmytrodanylyk/circular-progress-button">link</a></h4>
+				<p>Yet another example of a progress bar.</p>
+			</li>
+			<li>
+				<h4><strong>Float Labeled Text Field</strong> - <a href="https://github.com/SemonCat/FloatLabeledTextField">link</a></h4>
+				<p>This project allows us to show hint text above edit text when we start typing. This might be useful when you have prepopulated Edit Text fields, or when you have a large number of them to show user what is purpose of every Edit Text field.</p>
+			</li>
+			<li>
+				<h4><strong>Matterial Ripple Layout</strong> - <a href="https://github.com/balysv/material-ripple">link</a></h4>
+				<p>We use this project to bring Material design ripple effect to api levels lower then Lolipop API level (pre-21). If you want to get ripple effect, add MaterialRippleLayout to your xml layout, then nest you own views into it.</p>
+			</li>
+			<li>
+				<h4><strong>Pull Zoom View</strong> - <a href="https://github.com/Frank-Zhu/PullZoomView">link</a></h4>
+				<p>This project allows us to show parallax effect with image that is attached on top of ListView or ScrollView. You can see an example by clicking the link of project.</p>
+			</li>
+			<li>
+				<h4><strong>Not Boring ActionBar</strong> - <a href="https://github.com/flavienlaurent/NotBoringActionBar">link</a></h4>
+				<p>Please take a look at <a href="http://flavienlaurent.com/blog/2013/11/20/making-your-action-bar-not-boring">this link</a> for more details.</p>
+			</li>
+			<li>
+				<h4><strong>Shape Image View</strong> - <a href="https://github.com/siyamed/android-shape-imageview">link</a></h4>
+				<p>This project allows us to create different shapes around images using ImageViews. Visit link for more information.</p>
+			</li>
+			<li>
+				<h4><strong>List View Animations</strong> - <a href="https://github.com/nhaarman/ListViewAnimations">link</a></h4>
+				<p>For the most beautiful animations you want with your ListView items, use this project. To use this project with Sticky List Headers, use project below (Sticky List Headers).</p>
+			</li>
+			<li>
+				<h4><strong>Sticky List Headers</strong> - <a href="https://github.com/emilsjolander/StickyListHeaders">link</a></h4>
+				<p>Sticky list headers project allows you to have headers drown above ListView (like the ones you have in Instagram application). For more information, take a look at a the link.</p>
+			</li>
+			<li>
+				<h4><strong>Animated Expandable List View</strong> - <a href="https://github.com/idunnololz/AnimatedExpandableListView">link</a></h4>
+				<p>This project is used to animate expanded list items in ExpandableListView.</p>
+			</li>
+			<li>
+				<h4><strong>Pager Sliding TabS trip</strong> - <a href="https://github.com/astuetz/PagerSlidingTabStrip">link</a></h4>
+				<p>This project is used to make items in Tab category.</p>
+			</li>
+		</ul>
+		
+		<p>
+			This demo project is called UIAppTemplate in workspace and you can run it and test from Eclipse/Android Studio. Every project from GitHub is imported into workspace and converted to library project, but only one is imported as library project into our demo project (StickyListHeaders). So, if you would like to use features from these GitHub projects, you can import them as library projects into your own (to do so, please take a look at <a href="http://developer.android.com/tools/projects/projects-eclipse.html#ReferencingLibraryProject">this page</a>).
+		</p>
+		<p>
+			Since every project taken from GitHub is not imported as a library, but just copy/pasted into our UIAppTemplate project, you may have some issues implementing our UI items that use foreign projects components. Eg. if you want to use ProgressWheel in your project, you have two options. First is to import ProgressWheel from our workspace and then import that project as library into your project. Second option is to copy/paste our file ProjectWheel.java (which is basicly copy/pasted file from GitHub project) into you project (as we did). If you choose second option, you might stuck with errors, usually something with generated R file. If you get with <i>R cannot be resolved to a variable</i> error, organize your imports and import R from your project (it has the same package name as your project). Then, if you come with <i>R.styleable.<strong>Something</strong> cannot be resolved to a variable</i>, open <i>attrs.xml</i> file from our project and find appropriate <i>declare-styleable</i>, then copy/paste it to you project's <i>attrs.xml</i> file. If you come with <i>R.raw cannot be resolved to a variable</i>, copy/paste <i>raw</i> folder. And so on. If you stuck with an error you can not solve, please contact us and we will try to help you.
+		</p>
+		
+		<hr>
+		
+		<h3 id="splash_screens"><strong>Splash screens</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Splash screens uses dialogs to implement splash screen (for more information take a look at: <a href="http://lagoman.com/2014/03/android-splash-screen/" target="_blank">link</a>). We have three different splash screen options. Additionally, we use FontelloTextView to display logo, and KenBurnsView to animate background image. We use two background images (named the same: <i>splash_screen_background.jpg</i>) - one is for portrait mode (located in <i>drawable-nodpi</i> folder) and another is for landscape mode (located in <i>drawable-land-nodpi</i> folder).
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>SplashScreensFragment.java</li>
+					<li>SplashScreensActivity.java</li>
+					<li>RobotoTextView.java</li>
+					<li>FontelloTextView.java</li>
+					<li>KenBurnsView.java</li>
+					<li>SubcategoryAdapter.java *</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>fragment_splash_screens.xml</li>
+					<li>activity_splash_screen.xml</li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>drawable-nodpi/splash_screen_background.jpg</li>
+					<li>drawable-land-nodpi/splash_screen_background.jpg</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="progress_bars"><strong>Progress bars</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			We used two GitHub projects to show progress bars. First is called <a href="https://github.com/Todd-Davies/ProgressWheel">Progress Wheel</a>, second is called <a href="https://github.com/dmytrodanylyk/circular-progress-button">Circular Progress Button</a>. To use them, please take a look at their documentation. If you need further assistance, don't hesitate to contact us.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Libraries used</li>
+				<ul class="alpha">
+					<li><a href="https://github.com/Todd-Davies/ProgressWheel">Progress Wheel</a></li>
+					<li><a href="https://github.com/dmytrodanylyk/circular-progress-button">Circular Progress Button</a></li>
+				</ul>
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>ProgressWheel.java</li>
+					<li>CircularProgressButton.java</li>
+					<li>ProgressBarsFragment.java</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>fragment_progress_bars.xml</li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>styles_progress_bars.xml</li>
+					<li>attrs.xml</li>
+				</ul>
+			<li>packages</li>
+				<ul class="alpha">
+					<li>com.csform.android.uiapptemplate.view.cpb</li>
+				</ul>
+		</ul>
+		
+		<h3 id="text_views"><strong>Text Views</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Nothing special to add - we used RobotoTextViews to show you how typography can be beautiful. Every style is defined in <i>styles_text_view.xml</i>.
+		</p>
+		<p>
+			IMPORTANT: Before using <a href="https://www.google.com/design/spec/style/typography.html#typography-standard-styles">Roboto</a> fonts, make sure that you have created <i>assets/fonts</i> folder and pasted every RobotoXXX.ttf file you are about to use in your app. If you haven't added *.ttf files to assets/fonts, or you did, but changed name of any .ttf file, you may get this exception: <i>java.lang.RuntimeException: native typeface cannot be made</i>. If you get one, make sure that you have file that is used for font named the same as the one called from <i>getRoboto(int typeface)</i> method of <i>RobotoTextView</i> class.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>TextViewsFragment.java</li>
+					<li>RobotoTextView.java</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>fragment_text_views.xml</li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>strings.xml</li>
+					<li>styles_text_view.xml</li>
+					<li>attrs.xml</li>
+				</ul>
+			<li>packages</li>
+				<ul class="alpha">
+					<li>com.csform.android.uiapptemplate.font</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="search_bars"><strong>Search Bars</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Search bars have a small implementation of suggestions while typing. Just type something :)
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>SearchBarsFragment.java <i>(modified in update 1.2)</i></li>
+					<li>SearchBarsActivity.java <i>(modified in update 1.1)</i></li>
+					<li>SearchBarMediaActivity.java <i>(modified in update 1.2)</i></li>
+					<li>SearchBarShopActivity.java <i>(modified in update 1.2)</i></li>
+					<li>FontelloTextView.java</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>activity_search_bars_light.xml</li>
+					<li>activity_search_bars_dark.xml</li>
+					<li>activity_search_bars_media.xml <i>(update 1.2)</i></li>
+					<li>activity_search_bars_shop.xml <i>(update 1.2)</i></li>
+					<li>activity_search_bars_social.xml <i>(update 1.1)</i></li>
+					<li>activity_search_bars_travel.xml <i>(update 1.1)</i></li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>strings.xml</li>
+					<li>styles_text_view.xml</li>
+					<li>attrs.xml</li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>drawable/edit_text_cursor_drawable.xml</li>
+					<li>drawable-xxx/edit_text_background_accent.9.png</li>
+					<li>drawable-xxx/edit_text_background_main.9.png</li>
+					<li>search_bar_background_travel.xml <i>(update 1.1)</i></li>
+					<li>drawable/gradient_background_media.xml <i>(update 1.2)</i></li>
+					<li>drawable/gradient_background_shop.xml <i>(update 1.2)</i></li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="login_pages"><strong>Login Pages</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			This is an example of a login/register/skip page. You can choose between dark and light versions.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>LogInPageFragment.java <i>(modified in update 1.2)</i></li>
+					<li>LogInPageActivity.java <i>(modified in update 1.2)</i></li>
+					<li>MaterialRippleLayout.java</li>
+					<li>FloatLabeledEditText.java</li>
+					<li>RobotoTextView.java</li>
+					<li>FontelloTextView.java</li>
+					<li>RegisterPageActivity.java <i>(update 1.1)</i></li>
+					<li>RegisterShopPageActivity.java <i>(update 1.2)</i></li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>activity_login_page_dark.xml</li>
+					<li>activity_login_page_light.xml</li>
+					<li>activity_login_page_media.xml <i>(update 1.2)</i></li>
+					<li>activity_login_page_social.xml <i>(update 1.1)</i></li>
+					<li>activity_login_page_travel.xml <i>(update 1.1)</i></li>
+					<li>activity_register.xml <i>(update 1.1)</i></li>
+					<li>activity_register_shop.xml <i>(update 1.2)</i></li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>strings.xml</li>
+					<li>styles_text_view.xml</li>
+					<li>attrs.xml</li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>drawable/edit_text_cursor_drawable.xml</li>
+					<li>drawable/transparent_button_selector.xml <i>(update 1.1)</i></li>
+					<li>drawable/login_travel_transparent_background.xml <i>(update 1.1)</i></li>
+					<li>drawable/login_travel_selector_button.xml <i>(update 1.1)</i></li>
+					<li>drawable/register_travel_transparent_background.xml <i>(update 1.1)</i></li>
+					<li>drawable/gradient_background_media.xml <i>(update 1.2)</i></li>
+					<li>drawable/gradient_background_shop.xml <i>(update 1.2)</i></li>
+					<li>drawable/login_media_gradient_background.xml <i>(update 1.2)</i></li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="dialogs"><strong>Dialogs</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			This is an example of a custom dialogs. We provided six different custom dialogs.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>DialogMediaActivity.java</li>
+					<li>DialogShopActivity.java</li>
+					<li>DialogSocialActivity.java</li>
+					<li>DialogTravelActivity.java</li>
+					<li>DialogUniversalInfoActivity.java</li>
+					<li>DialogUniversalWarningActivity.java</li>
+					<li>DialogFragment.java</li>
+					<li>DialogMediaUtils.java</li>
+					<li>DialogShopUtils.java</li>
+					<li>DialogSocialUtils.java</li>
+					<li>DialogTravelUtils.java</li>
+					<li>DialogUniversalInfoUtils.java</li>
+					<li>DialogUniversalWarningUtils.java</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>activity_dialog.xml</li>
+					<li>dialog_media.xml</li>
+					<li>dialog_shop.xml</li>
+					<li>dialog_social.xml</li>
+					<li>dialog_social_premium.xml</li>
+					<li>dialog_travel.xml</li>
+					<li>dialog_universal_info.xml</li>
+					<li>dialog_universal_warning.xml</li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>strings.xml</li>
+					<li>styles.xml</li>
+					<li>attrs.xml</li>
+					<li>colors.xml</li>
+					<li>colors_material.xml</li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>dialog_media_rating_bar_full_empty.xml</li>
+					<li>dialog_media_rating_bar_full_filled.xml</li>
+					<li>dialog_media_rating_bar_full.xml</li>
+					<li>gradient_background_dialog_shop.xml</li>
+					<li>selector_dialog_media.xml</li>
+					<li>selector_dialog_warning.xml</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="tabs"><strong>Tabs</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			For creating tabs, we used concept from project Pager Sliding Tab Strip (<a href="https://github.com/astuetz/PagerSlidingTabStrip" target="_blank">link</a>). In xml that you want to use for Tabs you need to use custom view PagerSlidingTabStrip.java, and item for all Tabs are psts_tab.xml.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>TabsMediaActivity.java</li>
+					<li>TabsShopActivity.java</li>
+					<li>TabsSocialActivity.java</li>
+					<li>TabsTravelActivity.java</li>
+					<li>TabsUniversalActivity.java</li>
+					<li>TabMediaFragment.java</li>
+					<li>TabShopFragment.java</li>
+					<li>TabSocialFragment.java</li>
+					<li>TabTravelFragment.java</li>
+					<li>TabUniversalFragment.java</li>
+					<li>PagerSlidingTabStrip.java</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>activity_tab_media.xml</li>
+					<li>activity_tab_shop.xml</li>
+					<li>activity_tab_social.xml</li>
+					<li>activity_tab_travel.xml</li>
+					<li>activity_tab_universal.xml</li>
+					<li>activity_tabs.xml</li>
+					<li>fragment_tab_media.xml</li>
+					<li>fragment_tab_shop.xml</li>
+					<li>fragment_tab_social.xml</li>
+					<li>fragment_tab_travel.xml</li>
+					<li>fragment_tab_universal.xml</li>
+					<li>psts_tab.xml</li>
+					<li>toolbar_tab_media.xml</li>
+					<li>toolbar_tab_shop.xml</li>
+					<li>toolbar_tab_social.xml</li>
+					<li>toolbar.xml</li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>strings.xml</li>
+					<li>styles.xml</li>
+					<li>attrs.xml</li>
+					<li>colors.xml</li>
+					<li>colors_material.xml</li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>edit_text_border.xml</li>
+					<li>gradient_background_tab_shop.xml</li>
+					<li>gradient_background_tab_travel.xml</li>
+					<li>psts_background_tab.xml</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="wizards"><strong>Wizards</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			For creating wizards, we used ViewPager and Material Design Icons. An area for swiping is ViewPager and marks for location is String. We use here Material Design Icons (Fontello) to mark location of current fragment in ViewPager.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>WizardMediaActivity.java</li>
+					<li>WizardShopActivity.java</li>
+					<li>WizardSocialActivity.java</li>
+					<li>WizardTravelActivity.java</li>
+					<li>WizardUniversalActivity.java</li>
+					<li>MaterialDesignIconsTextView.java</li>
+					<li>WizardFragment.java</li>
+					<li>WizardMediaFragment.java</li>
+					<li>WizardShopFragment.java</li>
+					<li>WizardSocialFragment.java</li>
+					<li>WizardTravelFragment.java</li>
+					<li>WizardUniversalFragment.java</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>activity_wizard_media.xml</li>
+					<li>activity_wizard_shop.xml</li>
+					<li>activity_wizard_social.xml</li>
+					<li>activity_wizard_travel.xml</li>
+					<li>activity_wizard_universal.xml</li>
+					<li>fragment_wizard_media.xml</li>
+					<li>fragment_wizard_shop.xml</li>
+					<li>fragment_wizard_social.xml</li>
+					<li>fragment_wizard_travel.xml</li>
+					<li>fragment_wizard_universal.xml</li>
+					<li>toolbar.xml</li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>strings.xml</li>
+					<li>styles.xml</li>
+					<li>attrs.xml</li>
+					<li>colors.xml</li>
+					<li>colors_material.xml</li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>gradient_background_wizard_media.xml</li>
+					<li>gradient_background_wizard_shop.xml</li>
+					<li>gradient_background_wizard_travel.xml</li>
+					<li>selector_wizard_travel.xml</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="image_gallery"><strong>Image Gallery</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			An example of image gallery elements. Very important tehnique we used here is to use <a href="http://developer.android.com/reference/android/widget/BaseAdapter.html#getItemViewType%28int%29">getItemViewType(int)</a> of a <a href="http://developer.android.com/reference/android/widget/BaseAdapter.html">BaseAdapter</a>. For more information, take a look at <a href="http://kyogs.blogspot.in/2014/06/the-use-of-getviewtypecount-and.html">here</a>.
+		</p>
+		<p>
+			So, why did we use ListView if gallery looks like it was used GridView. First, we needed a header to show title of a Category (to add header view, please take a look at <a href="http://www.vogella.com/tutorials/AndroidListView/article.html#miscellaneous_headerfooter">Vogella article</a>). To set header view, we had to use ListView. GridView does not support adding header views - logically. So, we had to create list items that look like grid items when GridView is set to 2 columns. So, we had to have items in ListView row that has both one and two images. We always have two images in a row except last row if there is odd number of items. So, instead of switching between View.GONE and View.VISIBLE to the last item, we created two list item xmls that do this for us. And then, in adapter, we checked for a type of item that is returned from method <i>getItemViewType(position)</i>, then we choose which xml to inflate. Xmls we used here are: <i>list_item_categories_two_columns.xml</i> and <i>list_item_categories_one_column.xml</i>.
+		</p>
+		<p>
+			If you use your own Activity, use <i>AppTheme.NoShadow</i> style as defined in Mainfest for <i>ImageGalleryCategoryActivity</i> and <i>ImageGallerySubcategoryActivity</i>.
+		</p>
+		<p>
+			NOTE: Category item layout has two different positions to show caption text and favourite image. These positions are on top or bottom of the image. To define position, we have to set boolean value in <i>ImageGalleryCategoryAdapter</i> or <i>ImageGallerySubcategoryAdapter</i> constructor. <strong>False</strong> value means that the layout that contains caption text and favourite image is positioned at the bottom of the parent (parent is RelativeLayout that contains ImageView and the layout). <strong>True</strong> means that the layout is positioned at the top of the parent. All these is reated to <i>list_item_categories_two_columns.xml</i> and <i>list_item_categories_one_column.xml</i> layouts and <i>@+id/layout_top_bottom_1</i> and <i>@+id/layout_top_bottom_2</i> ids that are defined for LinearLayout in each of the two layouts.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>ImageGalleryFragment.java
+					<li>ImageGalleryCategoryActivity.java</li>
+					<li>ImageGallerySubcategoryActivity.java</li>
+					<li>ImageGalleryCategoryAdapter.java</li>
+					<li>ImageGallerySubcategoryAdapter.java</li>
+					<li>DummyContent.java *</li>
+					<li>ImageUtil.java</li>
+					<li>SubcategoryAdapter.java **</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>fragment_image_gallery.xml</li>
+					<li>header_image_gallery.xml</li>
+					<li>list_item_categories_one_column.xml</li>
+					<li>list_item_categories_two_columns.xml</li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>styles.xml</li>
+					<li>attrs.xml</li>
+				</ul>
+			<li>AndroidManifest.xml</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="left_menus"><strong>Left Menus</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Navigation drawer layout, most commonly known as a <i>left menu</i> is just another ListView that is placed into a special layout (<i>android.support.v4.widget.DrawerLayout</i>) capable of showing when swipped from far left position of the screen. To implement native Android left menu, please visit <a href="https://developer.android.com/training/implementing-navigation/nav-drawer.html">this link</a>.
+		</p>
+		<p>
+			So, if a left menu is just a ListView, there is nothing special to add here except that we added <a href="http://www.vogella.com/tutorials/AndroidListView/article.html#miscellaneous_headerfooter">header view</a> by inflating <i>layout/header_navigation_drawer_1</i> or <i>layout/header_navigation_drawer_2</i> xmls.
+		</p>
+		<p>
+			Only thing you should be warned about is that we have two xmls that define item in list. First one has icon, but second one does not have it. So, creating adapter object (of DrawerAdapter class), we had to pass boolean value to indicate what layout to inflate. <strong>True</strong> is for <i>layout/header_navigation_drawer_<strong>1</strong></i>, <strong>false</strong> is for <i>layout/header_navigation_drawer_<strong>2</strong></i>.
+		</p>
+		<p>
+			NOTE: If you are about to add custom header view to ListView, do it before calling <i>setAdapter(Adapter)</i> method of a ListView. This is important if you are supporting pre-KitKat devices. We did so, so there is nothing you should be worried about for now.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>LeftMenusActivity.java <i>(modified in update 1.2)</i></li>
+					<li>LeftMenusFragment.java <i>(modified in update 1.2)</i></li>
+					<li>DrawerItem.java</li>
+					<li>DrawerAdapter.java</li>
+					<li>ImageUtil.java</li>
+					<li>LeftMenuMediaActivity.java <i>(update 1.2)</i></li>
+					<li>LeftMenuShopActivity.java <i>(update 1.2)</i></li>
+					<li>LeftMenuSocialActivity.java <i>(update 1.1)</i></li>
+					<li>LeftMenuTravelActivity.java <i>(update 1.1)</i></li>
+					<li>DrawerMediaAdapter.java <i>(update 1.2)</i></li>
+					<li>DrawerShopAdapter.java <i>(update 1.2)</i></li>
+					<li>DrawerTravelAdapter.java <i>(update 1.1)</i></li>
+					<li>DrawerSocialAdapter.java <i>(update 1.1)</i></li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>activity_main.xml</li>
+					<li>list_view.xml</li>
+					<li>fragment_left_menus.xml</li>
+					<li>header_navigation_drawer_1.xml (modified in update 1.1)</li>
+					<li>header_navigation_drawer_2.xml</li>
+					<li>list_view_item_navigation_drawer_1.xml</li>
+					<li>list_view_item_navigation_drawer_2.xml</li>
+					<li>header_navigation_drawer_social.xml <i>(update 1.1)</i></li>
+					<li>header_navigation_drawer_media.xml <i>(update 1.2)</i></li>
+					<li>header_navigation_drawer_travel.xml <i>(update 1.1)</i></li>
+					<li>list_view_item_navigation_drawer_media.xml <i>(update 1.2)</i></li>
+					<li>list_view_item_navigation_drawer_shop.xml <i>(update 1.2)</i></li>
+					<li>list_view_item_navigation_drawer_travel.xml <i>(update 1.1)</i></li>
+					<li>list_view_item_navigation_drawer_social.xml <i>(update 1.1)</i></li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>dimens.xml</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="parallax"><strong>Parallax</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			We use two foreign projects to show <a href="http://en.wikipedia.org/wiki/Parallax_scrolling">parralax scrolling</a> effect: Pull Zoom View and Not Boring Action Bar. First one is used to show real parallax effect with effect of zooming header background image (like the one Viber is using when viewing contact profile). The other one is an effect that Google Play Newstand app uses - header image with logo in center and Ken Burns effect.
+		</p>
+		<p>
+			Both projects are using new Activity to show parallax effects. Not Boring Action Bar project uses theme <i>AppTheme.Overlay</i> (defined in AndroidManifest.xml) for its Activity, don't forget to add it to your own project.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>ParallaxEffectsFragment.java <i>(modified in update 1.2)</i></li>
+					<li>ParallaxKenBurnsActivity.java <i>(modified in update 1.1)</i></li>
+					<li>ParallaxActivity.java</li>
+					<li>DrawerAdapter.java</li>
+					<li>KenBurnsView.java</li>
+					<li>ImageUtil.java</li>
+					<li>DefaultAdapter.java</li>
+					<li>PullToZoomListView.java</li>
+					<li>SubcategoryAdapter.java **</li>
+					<li>ParallaxMediaActivity.java <i>(update 1.2)</i></li>
+					<li>ParallaxShopActivity.java <i>(update 1.2)</i></li>
+					<li>ParallaxSocialActivity.java <i>(update 1.1)</i></li>
+					<li>ParallaxTravelActivity.java <i>(update 1.1)</i></li>
+					<li>ParallaxMediaAdapter.java <i>(update 1.2)</i></li>
+					<li>ParallaxShopAdapter.java <i>(update 1.2)</i></li>
+					<li>ParallaxSocialAdapter.java <i>(update 1.1)</i></li>
+					<li>ParallaxTravelAdapter.java <i>(update 1.1)</i></li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>ken_burns_header.xml</li>
+					<li>activity_parallax_ken_burns.xml</li>
+					<li>activity_parallax.xml</li>
+					<li>header_navigation_drawer_3.xml</li>
+					<li>activity_parallax_media.xml <i>(update 1.2)</i></li>
+					<li>activity_parallax_shop.xml <i>(update 1.2)</i></li>
+					<li>activity_parallax_social.xml <i>(update 1.1)</i></li>
+					<li>activity_parallax_travel.xml <i>(update 1.1)</i></li>
+					<li>header_parallax_media.xml <i>(update 1.2)</i></li>
+					<li>header_parallax_shop.xml <i>(update 1.2)</i></li>
+					<li>header_parallax_social.xml <i>(update 1.1)</i></li>
+					<li>header_parallax_travel.xml <i>(update 1.1)</i></li>
+					<li>list_item_parallax_social.xml <i>(update 1.1)</i></li>
+					<li>list_item_parallax_travel.xml <i>(update 1.1)</i></li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>dimens.xml</li>
+				</ul>
+			<li>AndroidManifest.xml</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="shape_image_views"><strong>Shape Image Views</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			This section uses <a href="https://github.com/siyamed/android-shape-imageview">Shape Image View</a> project from GitHub. You may use these files to create any shape around image and you can use the project with any image loading library since it extends regular ImageView.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>packages</li>
+				<ul class="alpha">
+					<li>com.csform.android.uiapptemplate.view.siv</li>
+					<li>com.csform.android.uiapptemplate.view.siv.mask</li>
+					<li>com.csform.android.uiapptemplate.view.siv.path</li>
+					<li>com.csform.android.uiapptemplate.view.siv.path.parser</li>
+					<li>com.csform.android.uiapptemplate.view.siv.shader</li>
+				</ul>
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>ShapeImageViewsFragment.java <i>(modified in update 1.2)</i></li>
+					<li>ShapeImageView.java</li>
+					<li>ImageUtil.java</li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>fragment_shape_image_views.xml <i>(modified in update 1.2)</i></li>
+				</ul>
+			<li>values files</li>
+				<ul class="alpha">
+					<li>styles.xml</li>
+				</ul>
+			<li>raw files</li>
+				<ul class="alpha">
+					<li><i>every file in this folder <i>(modified in update 1.2)</i></i></li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="list_views"><strong>List Views</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			This is the biggest part of the project since it uses three different projects to deliver beautiful animations and effects on ListViews. Those projects are <i><a href="https://github.com/nhaarman/ListViewAnimations">List View Animations</a></i>, <i><a href="https://github.com/emilsjolander/StickyListHeaders">Sticky List Headers</a></i> and <i><a href="https://github.com/idunnololz/AnimatedExpandableListView">Animated Expandable List View</a></i>. First one uses second one as a library. To import first project, you can use <i>.jar</i> files from our <i>libs</i> project: <i>listviewanimations_lib-core_3.1.0.jar</i>, <i>listviewanimations_lib-core-slh_3.1.0.jar</i>, <i>listviewanimations_lib-manipulation_3.1.0.jar</i> and <i>nineoldandroids-2.4.0.jar</i>. Since List View Animations project uses Sticky List Headers project, you have to import it as a completely new project to Eclipse/Android Studio and then import it as a library project to your project. Third project is indipendent project and can be used separately from any other project here.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>libs files</li>
+				<ul class="alpha">
+					<li>listviewanimations_lib-core_3.1.0.jar</li>
+					<li>listviewanimations_lib-core-slh_3.1.0.jar</li>
+					<li>listviewanimations_lib-manipulation_3.1.0.jar</li>
+					<li>nineoldandroids-2.4.0.jar</li>
+				</ul>
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>ListViewActivity.java <i>(modified in update 1.1)</i></li>
+					<li>ListViewsFragment.java <i>(modified in update 1.1)</i></li>
+					<li>GoogleCardsActivity.java</li>
+					<li>GoogleCardsMediaActivity.java <i>(update 1.2)</i></li>
+					<li>GoogleCardsShopActivity.java <i>(update 1.2)</i></li>
+					<li>GoogleCardsTravelActivity.java <i>(update 1.1)</i></li>
+					<li>GoogleCardsSocialActivity.java <i>(update 1.1)</i></li>
+					<li>GoogleCardsAdapter.java</li>
+					<li>GoogleCardsMediaAdapter.java <i>(update 1.2)</i></li>
+					<li>GoogleCardsShopAdapter.java <i>(update 1.2)</i></li>
+					<li>GoogleCardsSocialAdapter.java <i>(update 1.1)</i></li>
+					<li>GoogleCardsTravelAdapter.java <i>(update 1.1)</i></li>
+					<li>StickyListHeadersActivity.java</li>
+					<li>se.emilsjolander.stickylistheaders.StickyListHeadersListView.java (from <i>StickyListHeaders</i> project)</li>
+					<li>MyStickyListHeadersAdapter.java</li>
+					<li>MyStickyListHeadersMediaAdapter.java <i>(update 1.2)</i></li>
+					<li>MyStickyListHeadersShopAdapter.java <i>(update 1.2)</i></li>
+					<li>MyStickyListHeadersSocialAdapter.java <i>(modified in update 1.1)</i></li>
+					<li>MyStickyListHeadersTravelAdapter.java <i>(update 1.1)</i></li>
+					<li>AlphaInAnimationAdapter.java</li>
+					<li>StickyListHeadersListViewWrapper.java</li>
+					<li>ExpandableListViewActivity.java</li>
+					<li>ExpandableMediaListViewActivity.java <i>(update 1.2)</i></li>
+					<li>ExpandableShopListViewActivity.java <i>(update 1.2)</i></li>
+					<li>ExpandableTravelListViewActivity.java <i>(update 1.1)</i></li>
+					<li>ExpandableSocialListViewActivity.java <i>(update 1.1)</i></li>
+					<li>AnimatedExpandableListView.java</li>
+					<li>DynamicListView.java</li>
+					<li>DefaultAdapter.java</li>
+					<li>DummyModel.java</li>
+					<li>SimpleSwipeUndoAdapter.java</li>
+					<li><strong>Xxx</strong>AnimationAdapter.java</li>
+					<li>CategoriesListViewActivity.java <i>(modified in update 1.2)</i></li>
+					<li>DragAndDropMediaActivity.java <i>(update 1.2)</i></li>
+					<li>DragAndDropShopActivity.java <i>(update 1.2)</i></li>
+					<li>DragAndDropSocialActivity.java <i>(update 1.2)</i></li>
+					<li>DragAndDropTravelActivity.java <i>(update 1.2)</i></li>
+					<li>SwipToDissmissListViewActivity.java <i>(update 1.1)</i></li>
+					<li>SwipeToDissmissMediaAdapter.java <i>(update 1.2)</i></li>
+					<li>SwipeToDissmissShopAdapter.java <i>(update 1.2)</i></li>
+					<li>SwipeToDissmissTravelAndSocialAdapter.java <i>(update 1.1)</i></li>
+					<li>DummyContent.java <i>(modified in update 1.2)</i></li>
+					<li>DragAndDropMediaAdapter.java <i>(update 1.2)</i></li>
+					<li>DragAndDropShopAdapter.java <i>(update 1.2)</i></li>
+					<li>DragAndDropSocialAdapter.java <i>(update 1.2)</i></li>
+					<li>DragAndDropTravelAdapter.java <i>(update 1.2)</i></li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>list_view.xml</li>
+					<li>activity_stickylistheaders.xml</li>
+					<li>activity_expandable_list_view.xml</li>
+					<li>list_item_default.xml</li>
+					<li>list_item_undo_view.xml</li>
+					<li>list_item_google_cards.xml</li>
+					<li>list_row.xml</li>
+					<li>list_view_item_subcategory.xml</li>
+					<li>list_row.xml</li>
+					<li>list_item.xml</li>
+					<li>group_item.xml</li>
+					<li>activity_expandable_list_view_social.xml <i>(update 1.1)</i></li>
+					<li>activity_expandable_list_view_travel.xml <i>(update 1.1)</i></li>
+					<li>activity_login_page_light.xml <i>(modified in update 1.1)</i></li>
+					<li>header_expandable_list_view_travel.xml <i>(update 1.1)</i></li>
+					<li>list_item_drag_and_drop_social.xml <i>(update 1.1)</i></li>
+					<li>list_item_drag_and_drop_travel.xml <i>(update 1.1)</i></li>
+					<li>list_item_expandable_social_child.xml <i>(update 1.1)</i></li>
+					<li>list_item_expandable_social.xml <i>(update 1.1)</i></li>
+					<li>list_item_expandable_travel.xml <i>(update 1.1)</i></li>
+					<li>list_item_expandable_travel_child.xml <i>(update 1.1)</i></li>
+					<li>list_item_swipe_to_dissmiss_social.xml <i>(update 1.1)</i></li>
+					<li>list_item_swipe_to_dissmiss_travel.xml <i>(update 1.1)</i></li>
+					<li>list_item_undo_view_social.xml <i>(update 1.1)</i></li>
+					<li>list_item_undo_view_travel.xml <i>(update 1.1)</i></li>
+					<li>strings.xml <i>(modified in update 1.1, added some Material icons)</i></li>
+					<li>selector_background_empty.xml <i>(update 1.1)</i></li>
+					<li>list_header_social.xml <i>(update 1.1)</i></li>
+					<li>list_header_travel.xml <i>(update 1.1)</i></li>
+					<li>list_item_google_cards_social.xml <i>(update 1.1)</i></li>
+					<li>list_item_google_cards_travel.xml <i>(update 1.1)</i></li>
+					<li>list_item_sticky_list_header_social.xml <i>(update 1.1)</i></li>
+					<li>list_item_sticky_list_header_travel.xml <i>(update 1.1)</i></li>
+					<li>list_header_social.xml <i>(update 1.1)</i></li>
+					<li>list_header_travel.xml <i>(update 1.1)</i></li>
+					<li>activity_drag_and_Drop_media.xml <i>(update 1.2)</i></li>
+					<li>activity_drag_and_Drop_shop.xml <i>(update 1.2)</i></li>
+					<li>activity_expandable_list_view_media.xml <i>(update 1.2)</i></li>
+					<li>activity_expandable_list_view_shop.xml <i>(update 1.2)</i></li>
+					<li>activity_swop_to_dissmiss_media.xml <i>(update 1.2)</i></li>
+					<li>activity_swop_to_dissmiss_shop.xml <i>(update 1.2)</i></li>
+					<li>list_header_media.xml <i>(update 1.2)</i></li>
+					<li>list_header_shop.xml <i>(update 1.2)</i></li>
+					<li>list_item_drag_and_drop_media.xml <i>(update 1.2)</i></li>
+					<li>list_item_drag_and_drop_shop.xml <i>(update 1.2)</i></li>
+					<li>list_item_expandable_media_child.xml <i>(update 1.2)</i></li>
+					<li>list_item_expandable_media.xml <i>(update 1.2)</i></li>
+					<li>list_item_expandable_shop_child.xml <i>(update 1.2)</i></li>
+					<li>list_item_expandable_shop.xml <i>(update 1.2)</i></li>
+					<li>list_item_google_cards_media.xml <i>(update 1.2)</i></li>
+					<li>list_item_google_cards_shop.xml <i>(update 1.2)</i></li>
+					<li>list_item_sticky_header_media.xml <i>(update 1.2)</i></li>
+					<li>list_item_sticky_header_shop.xml <i>(update 1.2)</i></li>
+					<li>list_item_swipe_to_dissmiss_media.xml <i>(update 1.2)</i></li>
+					<li>list_item_swipe_to_dissmiss_shop.xml <i>(update 1.2)</i></li>
+					<li>list_item_undo_media.xml <i>(update 1.2)</i></li>
+					<li>list_item_undo_shop.xml <i>(update 1.2)</i></li>
+				</ul>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="check_radio"><strong>Check Boxes</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Check boxes used here are designed to match Material design guidelines. You may notice that we named files like CheckAndRadioButtonsXxx. We decided to remove Radio buttons for now, but we left file names because radio buttons are expected to be introduced in future updates.
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>CheckAndRadioBoxesFragment.java <i>(modified in update 1.2)</i></li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>fragment_check_and_radio_boxes.xml <i>(modified in update 1.2)</i></li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>drawable/checkbox_selector_dark.xml</li>
+					<li>drawable/checkbox_selector_light.xml</li>
+					<li>drawable-hdpi/check_off_dark.png</li>
+					<li>drawable-hdpi/check_on_dark.png</li>
+					<li>drawable-hdpi/check_off_light.png</li>
+					<li>drawable-hdpi/check_on_light.png</li>
+					<li>drawable-mdpi/check_off_dark.png</li>
+					<li>drawable-mdpi/check_on_dark.png</li>
+					<li>drawable-mdpi/check_off_light.png</li>
+					<li>drawable-mdpi/check_on_light.png</li>
+					<li>drawable-xhdpi/check_off_dark.png</li>
+					<li>drawable-xhdpi/check_on_dark.png</li>
+					<li>drawable-xhdpi/check_off_light.png</li>
+					<li>drawable-xhdpi/check_on_light.png</li>
+					<li>drawable-xxhdpi/check_off_dark.png</li>
+					<li>drawable-xxhdpi/check_on_dark.png</li>
+					<li>drawable-xxhdpi/check_off_light.png</li>
+					<li>drawable-xxhdpi/check_on_light.png</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		<h3 id="firebase_notif"><strong>Firebase notifications</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Firabase notifications are implemented in project. You will need to replace dummy file google-services.json inside UIAppTemplate folder with your own to enable them.
+		</p>
+		<p>
+			In order to do that you will need Firebase account. In Firebase console create new project. After that click on Add Firebase to you Android app.
+			For the package name enter com.csform.android.uiaptemplate or your package name if you already change it (and you should). Clicking on ADD APP button
+			you will be provided with an option to download your own google-services.json file. 
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>MyFirabaseMessagingService.java</li>
+				</ul>
+			<li>drawable files</li>
+				<ul class="alpha">
+					<li>drawable-mdpi/notification_icon.png</li>
+					<li>drawable-hdpi/notification_icon.png</li>
+					<li>drawable-xhdpi/notification_icon.png</li>
+					<li>drawable-xxhdpi/notification_icon.png</li>
+				</ul>
+		</ul>
+		
+		<hr>
+		<h3 id="subscribe_dialog"><strong>Subscribe on Mailchimp list</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+			Project now shows subscribe dialog after you click 3 times on main menu. You can change that number in MainActivity.java file SUBSCRIBE_VIEW field.
+			To be able to subscribe to your own list you must provide mailchimp api-key and list id into res/values/strings.xml. Put your list id inside mailchimp_list_id.
+			Api key is in format xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxx. Put xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx part of the key inside mailchimp_key and xxx part into server_num
+		</p>
+		<p>
+			Related files:
+		</p>
+		<ul class="alpha">
+			<li>Java files</li>
+				<ul class="alpha">
+					<li>SubscribeDialog.java </li>
+				</ul>
+			<li>layout files</li>
+				<ul class="alpha">
+					<li>dialog_subscribe.xml</li>
+				</ul>
+			</ul>
+		
+		<hr>
+		<p>
+			* SubcategoryAdapter.java is used to show possible different options from left menu like 3 SplashScreens, 2 LogInPages, 7 ListViews, 2 Parallaxes etc.
+		</p>
+		
+		<p>Once again, thank you so much for purchasing this app. As we said at the beginning, we'd be glad to help you if you have any questions relating to this app. No guarantees, but we'll do our best to assist.</p>
+		
+		<p class="append-bottom alt large"><strong>CreativeStudioForm</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
